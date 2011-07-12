@@ -1,0 +1,19 @@
+date: 2006-10-15 16:36:32 -0700
+
+h1. Am I crazy?
+
+A six-pack to anyone who can explain this behavior...
+
+<pre><code class="ruby">
+  require "tempfile"
+  t = Tempfile.new("blah")
+  t << "test"
+  puts t.read
+  =>
+  t.flush
+  puts t.read
+  =>
+  t.close; t.open
+  puts t.read
+  => test
+</code></pre>

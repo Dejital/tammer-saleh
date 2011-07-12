@@ -1,0 +1,5 @@
+date: 2008-02-08 08:49:10 -0800
+
+h1. Rails Rumours
+
+bq. Topfunky founder discloses origins of company name: "I was high." - "Rails Rumours":http://www.railsrumours.com/

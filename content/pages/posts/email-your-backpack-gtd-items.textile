@@ -1,0 +1,7 @@
+date: 2008-03-20 07:01:17 -0700
+
+h1. Email your Backpack GTD items
+
+Like most kids out there, I'm a follower of the "GTD system":http://en.wikipedia.org/wiki/GTD.  I've gone through a bunch of GTD software and have boiled it down to a combination of "Backpack":http://www.backpackit.com/ and a pad of paper in my hip pocket.
+
+I thought I'd share a script I wrote that emails me my list of todo items every morning.

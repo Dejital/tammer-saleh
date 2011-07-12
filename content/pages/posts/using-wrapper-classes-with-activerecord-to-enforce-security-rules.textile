@@ -1,0 +1,5 @@
+date: 2006-11-04 11:12:11 -0800
+
+h1. Using wrapper classes with ActiveRecord to enforce security rules
+
+We have a project here at "thoughtbot":http://www.thoughtbot.com that required a sprinkling of access control.  We needed to make sure that there were certain conditions applied to all references to a model depending on which controller was using it.  Pretty common stuff.  There were a couple of ways to get this done, but the path we decided was cleanest involved writing wrapper classes for our AR model.

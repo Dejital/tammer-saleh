@@ -1,0 +1,7 @@
+date: 2006-08-21 15:55:13 -0700
+
+h1. Now, don't be hatin'
+
+Now, I know I'm going to come off a little harsh on this one, but I think that it really points out (via contrast) exactly why I've been so happy with the Ruby community from the get go.
+
+From the "July 12th 2006":http://podcast.rubyonrails.org/transcripts/2006/adrian_holovaty/ Ruby on Rails podcast with Adrian Holovaty of Django/Python fame:

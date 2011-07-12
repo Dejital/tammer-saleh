@@ -1,0 +1,7 @@
+date: 2006-11-06 13:09:05 -0800
+
+h1. LDAP Server for ActiveRecord Models
+
+I almost titled this one "More Enterprisey Goodness for Rails."  
+
+What we've got here is an LDAP server that returns values from an ActiveRecord model.  It runs as a daemon next to your rails application, and is fairly configurable.  It's currently designed specifically for address book applications (tested with Thunderbird and the OS X address book), so point it at your Users model and enjoy all the tab-completability you can handle in your email client.  Patches, suggestions, and general accolades are more than welcome.

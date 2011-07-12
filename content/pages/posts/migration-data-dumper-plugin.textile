@@ -1,0 +1,16 @@
+date: 2006-08-15 18:56:34 -0700
+
+h1. Migration data dumper plugin
+
+__(Note: this entry was reposted from my last blog)__
+
+So you're playing around with your latest project which uses these brand spanky new migration thingies.  You're so edgy!  You run 
+
+<pre>
+rake migrate VERSION=0
+rake migrate
+</pre>
+
+to make sure all your migrations are in proper order, and _"Oh, Snap!"_,  all your data went ka-poof!
+
+Sucks, donut?  Well, I'm here to help.
