@@ -1,8 +1,0 @@
-date: 2008-01-30 10:03:25 -0800
-
-h1. A couple of small, but totally useful plugins
-
-There are two plugins (well, one's a gem) that I've been using lately which are so small that it seems silly to post about them.
-
-...except for the fact that they're incredibly useful.
-

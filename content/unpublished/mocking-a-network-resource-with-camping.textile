@@ -1,5 +1,0 @@
-date: 2007-02-13 14:46:26 -0800
-
-h1. Mocking a network resource with camping
-
-So we've been having a "good":http://giantrobots.thoughtbot.com/2007/1/15/camping-goes-camping "deal":http://giantrobots.thoughtbot.com/2007/2/12/rubedo-is-ruby-radio of fun with "Camping":http://redhanded.hobix.com/bits/campingAMicroframework.html over at "thoughtbot":http//thoughtbot.com.  Once again, it's shown its merit-badge-earning utility by getting me out of a testing jam.

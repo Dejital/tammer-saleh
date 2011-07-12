@@ -1,5 +1,0 @@
-date: 2006-08-15 17:35:55 -0700
-
-h1. Helloooo!
-
-I've decided to split my current blog into two parts -- techie stuff, and mushy stuff.  Welcome to the techie stuff!

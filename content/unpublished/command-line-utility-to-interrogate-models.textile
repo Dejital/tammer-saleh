@@ -1,7 +1,0 @@
-date: 2006-10-13 17:58:32 -0700
-
-h1. Command line utility to interrogate models
-
-I've started working at a "really great company":http://www.thoughtbot.com recently (a little ass kissing never hurts), and one of the projects I'm working on has some pretty hairy interrelated models on the back end.  
-
-As both an exercise in meta-programming, and to help me get a handle on the code I'm working with, I've written a little command line script that dumps all kinds of information about a model (or about the general hierarchy of all the models).

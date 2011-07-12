@@ -1,9 +1,0 @@
-date: 2007-09-22 14:49:33 -0700
-
-h1. Trunk Mephisto, Edge Rails, Piston, and Mongrel.  Oh, My.
-
-Here are some notes from my latest endeavor, which was to switch my main site over to mephisto.  I'd read "about using piston to manage local changes to the mephisto code base":http://blog.teksol.info/articles/2007/06/07/using-piston-to-manage-external-applications, and that definitely sounded like the way to go.
-
-*This is not the easiest or fastest way to install Mephisto.*
-
-A lot of the steps below are overkill if you don't need to keep mephisto in your own SVN repo, or if you don't want to manage your themes in your repo.  But this outlines what I think is a solid way of maintaining mephisto in a production environment.
