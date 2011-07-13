@@ -1,0 +1,56 @@
+date: 
+
+h1. Better FakeWeb stubbing for Paperclip and S3
+
+h2. Old
+
+@@@ ruby
+# Stubs the HTTP PUT for an attachment using S3 storage.
+#
+# @example
+#   stub_paperclip_s3('user', 'avatar', 'png')
+def stub_paperclip_s3(model, attachment, extension)
+  definition = model.gsub(" ", "_").classify.constantize.
+                     attachment_definitions[attachment.to_sym]
+
+  path = "http://s3.amazonaws.com/:id/#{definition[:path]}"
+  path.gsub!(/:([^\/\.]+)/) do |match|
+    "([^\/\.]+)"
+  end
+
+  begin
+    FakeWeb.register_uri(:put, Regexp.new(path), :body => "OK")
+  rescue NameError
+    raise NameError, "the stub_paperclip_s3 shoulda macro requires the fakeweb gem."
+  end
+end
+@@@
+
+h2. New
+
+@@@ ruby
+def stub_all_s3_for_paperclip_model(klass)
+  definitions = klass.read_inheritable_attribute(:attachment_definitions)
+  definitions.each do |attachment_name, definition|
+    next unless definition[:storage].to_s == "s3"
+
+    path = "http://s3.amazonaws.com/#{definition[:bucket]}/#{definition[:path]}"
+
+    regexp = Regexp.escape(path)
+    regexp.gsub!(/:attachment/,   attachment_name.to_s.underscore.pluralize)
+    regexp.gsub!(/:class/,        klass.name.tableize)
+
+    if definition[:styles]
+      styles = definition[:styles].keys.map(&:to_s) + ["original"]
+      regexp.gsub!(/:style/, "(#{styles.join('|')})")
+    end
+    regexp.gsub!(/:id/,           '\d+')
+    regexp.gsub!(/:id_partition/, '\d+\/\d+\/\d+')
+    regexp.gsub!(/:rails_env/,    Rails.env)
+    regexp.gsub!(/:rails_root/,   Rails.root)
+    regexp.gsub!(/:[^\/]+/,      '[^\/]+')
+    FakeWeb.register_uri(:any, Regexp.new(regexp), :body => "OK")
+  end
+end
+@@@
+
