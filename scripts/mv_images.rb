@@ -13,7 +13,7 @@ CSV.read("config/images.csv", :headers => true).each do |row|
 
   file_without_ext = File.basename(row["file"], ".*")
   ext = File.extname(source_file)
-  dest_file = "content/attachments/images/#{file_without_ext}/original.#{ext}"
+  dest_file = "content/attachments/images/#{file_without_ext}/original#{ext}"
 
   puts dest_file
 
