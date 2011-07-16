@@ -25,6 +25,12 @@ class Nesta::FileModel
   end
 end
 
+# SELECT 
+# quote, who, who_url, "where", where_url, position, company, company_url, short_quote
+# INTO OUTFILE '/tmp/recommendations.csv' FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' ESCAPED BY '\\\\' LINES TERMINATED BY "\\n" FROM recommendations;
+
+
+
   # def uploaded_image_tag(image_name, opts = {})
   #   opts.symbolize_keys
 
