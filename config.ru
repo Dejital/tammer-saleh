@@ -7,9 +7,11 @@ require 'nesta/app'
 
 $LOAD_PATH << File.join(File.dirname(__FILE__), "lib")
 
-Dir[File.join(File.dirname(__FILE__), 'lib/extensions/**/*.rb')].each {|extension| require extension }
+# require 'active_support/core_ext/object'
+require 'active_support/all'
+require 'padrino-helpers'
 
-require 'active_support/core_ext/object'
+Dir[File.join(File.dirname(__FILE__), 'lib/**/*.rb')].each {|lib| require lib }
 
 Nesta::App.root = ::File.expand_path('.', ::File.dirname(__FILE__))
 run Nesta::App
