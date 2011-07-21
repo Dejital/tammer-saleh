@@ -8,7 +8,6 @@ class Nesta::FileModel
     when :haml
       Haml::Engine.new(text).to_html(scope)
     when :textile
-      puts "rendering redcloth"
       RedCloth.new(Formatter.new(text).to_html).to_html
     end
   end
