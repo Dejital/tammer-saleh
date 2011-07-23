@@ -1,3 +1,15 @@
+GIT
+  remote: https://github.com/gma/nesta.git
+  revision: 57c0e293aad0aa7cb930a46ccdd318bd5e5cfcee
+  specs:
+    nesta (0.9.5)
+      RedCloth (~> 4.2)
+      haml (~> 3.1)
+      maruku (>= 0.6.0)
+      sass (~> 3.1)
+      shotgun (>= 0.8)
+      sinatra (= 1.1.2)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -20,13 +32,6 @@ GEM
     maruku (0.6.0)
       syntax (>= 1.0.0)
     mime-types (1.16)
-    nesta (0.9.5)
-      RedCloth (~> 4.2)
-      haml (~> 3.1)
-      maruku (>= 0.6.0)
-      sass (~> 3.1)
-      shotgun (>= 0.8)
-      sinatra (= 1.1.2)
     padrino (0.9.22)
       padrino-admin (= 0.9.22)
       padrino-cache (= 0.9.22)
@@ -82,6 +87,6 @@ PLATFORMS
 DEPENDENCIES
   active_support
   i18n
-  nesta (= 0.9.5)
+  nesta!
   padrino
   thin
